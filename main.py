@@ -22,7 +22,7 @@ firebase_admin.initialize_app(cred)
 db = firestore.client()
 
 # ================= Config =================
-TOKEN = "8620284112:AAGJfg7GqAUnpg2E2fOuCO65o7pBm0crR_0"
+TOKEN = os.getenv("TOKEN")
 ADMIN_ID = 7879933809
 
 SERVERS = ["https://lanie-underage-aprioristically.ngrok-free.dev"]
