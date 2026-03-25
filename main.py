@@ -17,8 +17,16 @@ from telegram.ext import (
 )
 
 # ================= Firebase =================
-cred = credentials.Certificate("HotmailDB.json")
+firebase_json = os.getenv("HotmailDB")
+
+if not firebase_json:
+    raise ValueError("HotmailDB environment variable is not set")
+
+cred_dict = json.loads(firebase_json)
+
+cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred)
+
 db = firestore.client()
 
 # ================= Config =================
