@@ -34,7 +34,7 @@ db = firestore.client()
 TOKEN = os.getenv("TOKEN")
 ADMIN_ID = 7879933809
 
-SERVERS = ["https://excludable-panickingly-mercedes.ngrok-free.dev"] #https://lanie-underage-aprioristically.ngrok-free.dev
+SERVERS = ["https://lanie-underage-aprioristically.ngrok-free.dev"] 
 server_index = 0
 
 # ================= Cache =================
